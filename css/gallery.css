@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    background-image: url('images/wall-background.jpg'); /* Add your wall background image here */
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000; /* Text color to contrast with the wall background */
+}
+
+#gallery {
+    width: 110%;
+    max-width: 1500px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow for a slight 3D effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#featured {
+    width: 80%;
+    height: 80%;
+    max-width: 100%;
+    border: 10px solid #ccc; /* Frame for the featured image */
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for the frame */
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#thumbnails {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#thumbnails li {
+    margin: 0 10px;
+}
+
+#thumbnails img {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.3s, filter 0.3s; /* Transition for smooth grayscale and scale effects */
+}
+
+#thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+#thumbnails img.active {
+    border-color: #007BFF;
+    filter: none;
+}
